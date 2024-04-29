@@ -1,0 +1,1157 @@
+{
+    "training": [
+        {
+            "images": "00000.nii.gz"
+        },
+        {
+            "images": "00002.nii.gz"
+        },
+        {
+            "images": "00004.nii.gz"
+        },
+        {
+            "images": "00005.nii.gz"
+        },
+        {
+            "images": "00006.nii.gz"
+        },
+        {
+            "images": "00007.nii.gz"
+        },
+        {
+            "images": "00008.nii.gz"
+        },
+        {
+            "images": "00009.nii.gz"
+        },
+        {
+            "images": "00010.nii.gz"
+        },
+        {
+            "images": "00011.nii.gz"
+        },
+        {
+            "images": "00012.nii.gz"
+        },
+        {
+            "images": "00013.nii.gz"
+        },
+        {
+            "images": "00014.nii.gz"
+        },
+        {
+            "images": "00015.nii.gz"
+        },
+        {
+            "images": "00016.nii.gz"
+        },
+        {
+            "images": "00017.nii.gz"
+        },
+        {
+            "images": "00018.nii.gz"
+        },
+        {
+            "images": "00019.nii.gz"
+        },
+        {
+            "images": "00020.nii.gz"
+        },
+        {
+            "images": "00021.nii.gz"
+        },
+        {
+            "images": "00022.nii.gz"
+        },
+        {
+            "images": "00023.nii.gz"
+        },
+        {
+            "images": "00024.nii.gz"
+        },
+        {
+            "images": "00025.nii.gz"
+        },
+        {
+            "images": "00026.nii.gz"
+        },
+        {
+            "images": "00027.nii.gz"
+        },
+        {
+            "images": "00028.nii.gz"
+        },
+        {
+            "images": "00029.nii.gz"
+        },
+        {
+            "images": "00030.nii.gz"
+        },
+        {
+            "images": "00031.nii.gz"
+        },
+        {
+            "images": "00032.nii.gz"
+        },
+        {
+            "images": "00033.nii.gz"
+        },
+        {
+            "images": "00034.nii.gz"
+        },
+        {
+            "images": "00035.nii.gz"
+        },
+        {
+            "images": "00036.nii.gz"
+        },
+        {
+            "images": "00037.nii.gz"
+        },
+        {
+            "images": "00038.nii.gz"
+        },
+        {
+            "images": "00039.nii.gz"
+        },
+        {
+            "images": "00040.nii.gz"
+        },
+        {
+            "images": "00041.nii.gz"
+        },
+        {
+            "images": "00042.nii.gz"
+        },
+        {
+            "images": "00043.nii.gz"
+        },
+        {
+            "images": "00044.nii.gz"
+        },
+        {
+            "images": "00045.nii.gz"
+        },
+        {
+            "images": "00046.nii.gz"
+        },
+        {
+            "images": "00047.nii.gz"
+        },
+        {
+            "images": "00048.nii.gz"
+        },
+        {
+            "images": "00049.nii.gz"
+        },
+        {
+            "images": "00050.nii.gz"
+        },
+        {
+            "images": "00051.nii.gz"
+        },
+        {
+            "images": "00052.nii.gz"
+        },
+        {
+            "images": "00053.nii.gz"
+        },
+        {
+            "images": "00054.nii.gz"
+        },
+        {
+            "images": "00055.nii.gz"
+        },
+        {
+            "images": "00056.nii.gz"
+        },
+        {
+            "images": "00057.nii.gz"
+        },
+        {
+            "images": "00058.nii.gz"
+        },
+        {
+            "images": "00059.nii.gz"
+        },
+        {
+            "images": "00060.nii.gz"
+        },
+        {
+            "images": "00061.nii.gz"
+        },
+        {
+            "images": "00062.nii.gz"
+        },
+        {
+            "images": "00063.nii.gz"
+        },
+        {
+            "images": "00064.nii.gz"
+        },
+        {
+            "images": "00065.nii.gz"
+        },
+        {
+            "images": "00066.nii.gz"
+        },
+        {
+            "images": "00067.nii.gz"
+        },
+        {
+            "images": "00068.nii.gz"
+        },
+        {
+            "images": "00069.nii.gz"
+        },
+        {
+            "images": "00070.nii.gz"
+        },
+        {
+            "images": "00071.nii.gz"
+        },
+        {
+            "images": "00072.nii.gz"
+        },
+        {
+            "images": "00073.nii.gz"
+        },
+        {
+            "images": "00074.nii.gz"
+        },
+        {
+            "images": "00075.nii.gz"
+        },
+        {
+            "images": "00076.nii.gz"
+        },
+        {
+            "images": "00077.nii.gz"
+        },
+        {
+            "images": "00078.nii.gz"
+        },
+        {
+            "images": "00079.nii.gz"
+        },
+        {
+            "images": "00080.nii.gz"
+        },
+        {
+            "images": "00081.nii.gz"
+        },
+        {
+            "images": "00082.nii.gz"
+        },
+        {
+            "images": "00083.nii.gz"
+        },
+        {
+            "images": "00084.nii.gz"
+        },
+        {
+            "images": "00085.nii.gz"
+        },
+        {
+            "images": "00086.nii.gz"
+        },
+        {
+            "images": "00087.nii.gz"
+        },
+        {
+            "images": "00088.nii.gz"
+        },
+        {
+            "images": "00089.nii.gz"
+        },
+        {
+            "images": "00090.nii.gz"
+        },
+        {
+            "images": "00091.nii.gz"
+        },
+        {
+            "images": "00092.nii.gz"
+        },
+        {
+            "images": "00093.nii.gz"
+        },
+        {
+            "images": "00094.nii.gz"
+        },
+        {
+            "images": "00095.nii.gz"
+        },
+        {
+            "images": "00096.nii.gz"
+        },
+        {
+            "images": "00097.nii.gz"
+        },
+        {
+            "images": "00098.nii.gz"
+        },
+        {
+            "images": "00099.nii.gz"
+        },
+        {
+            "images": "00100.nii.gz"
+        },
+        {
+            "images": "00101.nii.gz"
+        },
+        {
+            "images": "00102.nii.gz"
+        },
+        {
+            "images": "00103.nii.gz"
+        },
+        {
+            "images": "00104.nii.gz"
+        },
+        {
+            "images": "00105.nii.gz"
+        },
+        {
+            "images": "00106.nii.gz"
+        },
+        {
+            "images": "00107.nii.gz"
+        },
+        {
+            "images": "00108.nii.gz"
+        },
+        {
+            "images": "00109.nii.gz"
+        },
+        {
+            "images": "00110.nii.gz"
+        },
+        {
+            "images": "00111.nii.gz"
+        },
+        {
+            "images": "00112.nii.gz"
+        },
+        {
+            "images": "00113.nii.gz"
+        },
+        {
+            "images": "00114.nii.gz"
+        },
+        {
+            "images": "00115.nii.gz"
+        },
+        {
+            "images": "00116.nii.gz"
+        },
+        {
+            "images": "00117.nii.gz"
+        },
+        {
+            "images": "00118.nii.gz"
+        },
+        {
+            "images": "00119.nii.gz"
+        },
+        {
+            "images": "00120.nii.gz"
+        },
+        {
+            "images": "00121.nii.gz"
+        },
+        {
+            "images": "00122.nii.gz"
+        },
+        {
+            "images": "00123.nii.gz"
+        },
+        {
+            "images": "00124.nii.gz"
+        },
+        {
+            "images": "00125.nii.gz"
+        },
+        {
+            "images": "00126.nii.gz"
+        },
+        {
+            "images": "00127.nii.gz"
+        },
+        {
+            "images": "00128.nii.gz"
+        },
+        {
+            "images": "00129.nii.gz"
+        },
+        {
+            "images": "00130.nii.gz"
+        },
+        {
+            "images": "00131.nii.gz"
+        },
+        {
+            "images": "00132.nii.gz"
+        },
+        {
+            "images": "00133.nii.gz"
+        },
+        {
+            "images": "00134.nii.gz"
+        },
+        {
+            "images": "00135.nii.gz"
+        },
+        {
+            "images": "00136.nii.gz"
+        },
+        {
+            "images": "00137.nii.gz"
+        },
+        {
+            "images": "00138.nii.gz"
+        },
+        {
+            "images": "00139.nii.gz"
+        },
+        {
+            "images": "00140.nii.gz"
+        },
+        {
+            "images": "00141.nii.gz"
+        },
+        {
+            "images": "00142.nii.gz"
+        },
+        {
+            "images": "00143.nii.gz"
+        },
+        {
+            "images": "00144.nii.gz"
+        },
+        {
+            "images": "00145.nii.gz"
+        },
+        {
+            "images": "00146.nii.gz"
+        },
+        {
+            "images": "00147.nii.gz"
+        },
+        {
+            "images": "00148.nii.gz"
+        },
+        {
+            "images": "00149.nii.gz"
+        },
+        {
+            "images": "00150.nii.gz"
+        },
+        {
+            "images": "00151.nii.gz"
+        },
+        {
+            "images": "00152.nii.gz"
+        },
+        {
+            "images": "00153.nii.gz"
+        },
+        {
+            "images": "00154.nii.gz"
+        },
+        {
+            "images": "00155.nii.gz"
+        },
+        {
+            "images": "00156.nii.gz"
+        },
+        {
+            "images": "00157.nii.gz"
+        },
+        {
+            "images": "00158.nii.gz"
+        },
+        {
+            "images": "00159.nii.gz"
+        },
+        {
+            "images": "00160.nii.gz"
+        },
+        {
+            "images": "00161.nii.gz"
+        },
+        {
+            "images": "00162.nii.gz"
+        },
+        {
+            "images": "00163.nii.gz"
+        },
+        {
+            "images": "00164.nii.gz"
+        },
+        {
+            "images": "00165.nii.gz"
+        },
+        {
+            "images": "00166.nii.gz"
+        },
+        {
+            "images": "00167.nii.gz"
+        },
+        {
+            "images": "00168.nii.gz"
+        },
+        {
+            "images": "00169.nii.gz"
+        },
+        {
+            "images": "00170.nii.gz"
+        },
+        {
+            "images": "00171.nii.gz"
+        },
+        {
+            "images": "00172.nii.gz"
+        },
+        {
+            "images": "00173.nii.gz"
+        },
+        {
+            "images": "00174.nii.gz"
+        },
+        {
+            "images": "00175.nii.gz"
+        },
+        {
+            "images": "00176.nii.gz"
+        },
+        {
+            "images": "00177.nii.gz"
+        },
+        {
+            "images": "00178.nii.gz"
+        },
+        {
+            "images": "00179.nii.gz"
+        },
+        {
+            "images": "00180.nii.gz"
+        },
+        {
+            "images": "00181.nii.gz"
+        },
+        {
+            "images": "00182.nii.gz"
+        },
+        {
+            "images": "00183.nii.gz"
+        },
+        {
+            "images": "00184.nii.gz"
+        },
+        {
+            "images": "00185.nii.gz"
+        },
+        {
+            "images": "00186.nii.gz"
+        },
+        {
+            "images": "00187.nii.gz"
+        },
+        {
+            "images": "00188.nii.gz"
+        },
+        {
+            "images": "00189.nii.gz"
+        },
+        {
+            "images": "00190.nii.gz"
+        },
+        {
+            "images": "00191.nii.gz"
+        },
+        {
+            "images": "00192.nii.gz"
+        },
+        {
+            "images": "00193.nii.gz"
+        },
+        {
+            "images": "00194.nii.gz"
+        },
+        {
+            "images": "00195.nii.gz"
+        },
+        {
+            "images": "00196.nii.gz"
+        },
+        {
+            "images": "00197.nii.gz"
+        },
+        {
+            "images": "00198.nii.gz"
+        },
+        {
+            "images": "00199.nii.gz"
+        },
+        {
+            "images": "00200.nii.gz"
+        },
+        {
+            "images": "00201.nii.gz"
+        },
+        {
+            "images": "00202.nii.gz"
+        },
+        {
+            "images": "00203.nii.gz"
+        },
+        {
+            "images": "00204.nii.gz"
+        },
+        {
+            "images": "00205.nii.gz"
+        },
+        {
+            "images": "00206.nii.gz"
+        },
+        {
+            "images": "00207.nii.gz"
+        },
+        {
+            "images": "00208.nii.gz"
+        },
+        {
+            "images": "00209.nii.gz"
+        },
+        {
+            "images": "00210.nii.gz"
+        },
+        {
+            "images": "00211.nii.gz"
+        },
+        {
+            "images": "00212.nii.gz"
+        },
+        {
+            "images": "00213.nii.gz"
+        },
+        {
+            "images": "00214.nii.gz"
+        },
+        {
+            "images": "00215.nii.gz"
+        },
+        {
+            "images": "00216.nii.gz"
+        },
+        {
+            "images": "00217.nii.gz"
+        },
+        {
+            "images": "00218.nii.gz"
+        },
+        {
+            "images": "00219.nii.gz"
+        },
+        {
+            "images": "00220.nii.gz"
+        },
+        {
+            "images": "00221.nii.gz"
+        },
+        {
+            "images": "00222.nii.gz"
+        },
+        {
+            "images": "00223.nii.gz"
+        },
+        {
+            "images": "00224.nii.gz"
+        },
+        {
+            "images": "00225.nii.gz"
+        },
+        {
+            "images": "00226.nii.gz"
+        },
+        {
+            "images": "00227.nii.gz"
+        },
+        {
+            "images": "00228.nii.gz"
+        },
+        {
+            "images": "00229.nii.gz"
+        },
+        {
+            "images": "00230.nii.gz"
+        },
+        {
+            "images": "00231.nii.gz"
+        },
+        {
+            "images": "00232.nii.gz"
+        },
+        {
+            "images": "00233.nii.gz"
+        },
+        {
+            "images": "00234.nii.gz"
+        },
+        {
+            "images": "00235.nii.gz"
+        },
+        {
+            "images": "00236.nii.gz"
+        },
+        {
+            "images": "00237.nii.gz"
+        },
+        {
+            "images": "00238.nii.gz"
+        },
+        {
+            "images": "00239.nii.gz"
+        },
+        {
+            "images": "00241.nii.gz"
+        },
+        {
+            "images": "00242.nii.gz"
+        },
+        {
+            "images": "00245.nii.gz"
+        },
+        {
+            "images": "00246.nii.gz"
+        },
+        {
+            "images": "00247.nii.gz"
+        },
+        {
+            "images": "00250.nii.gz"
+        },
+        {
+            "images": "00252.nii.gz"
+        },
+        {
+            "images": "00253.nii.gz"
+        },
+        {
+            "images": "00255.nii.gz"
+        },
+        {
+            "images": "00257.nii.gz"
+        },
+        {
+            "images": "00259.nii.gz"
+        },
+        {
+            "images": "00260.nii.gz"
+        },
+        {
+            "images": "00262.nii.gz"
+        },
+        {
+            "images": "00264.nii.gz"
+        },
+        {
+            "images": "00267.nii.gz"
+        },
+        {
+            "images": "00268.nii.gz"
+        },
+        {
+            "images": "00270.nii.gz"
+        },
+        {
+            "images": "00274.nii.gz"
+        },
+        {
+            "images": "00277.nii.gz"
+        },
+        {
+            "images": "00279.nii.gz"
+        },
+        {
+            "images": "00280.nii.gz"
+        },
+        {
+            "images": "00281.nii.gz"
+        },
+        {
+            "images": "00282.nii.gz"
+        },
+        {
+            "images": "00284.nii.gz"
+        },
+        {
+            "images": "00285.nii.gz"
+        },
+        {
+            "images": "00286.nii.gz"
+        },
+        {
+            "images": "00289.nii.gz"
+        },
+        {
+            "images": "00290.nii.gz"
+        },
+        {
+            "images": "00292.nii.gz"
+        },
+        {
+            "images": "00294.nii.gz"
+        },
+        {
+            "images": "00296.nii.gz"
+        },
+        {
+            "images": "00298.nii.gz"
+        },
+        {
+            "images": "00303.nii.gz"
+        },
+        {
+            "images": "00305.nii.gz"
+        },
+        {
+            "images": "00306.nii.gz"
+        },
+        {
+            "images": "00309.nii.gz"
+        },
+        {
+            "images": "00311.nii.gz"
+        },
+        {
+            "images": "00312.nii.gz"
+        },
+        {
+            "images": "00314.nii.gz"
+        },
+        {
+            "images": "00316.nii.gz"
+        },
+        {
+            "images": "00317.nii.gz"
+        },
+        {
+            "images": "00321.nii.gz"
+        },
+        {
+            "images": "00323.nii.gz"
+        },
+        {
+            "images": "00324.nii.gz"
+        },
+        {
+            "images": "00325.nii.gz"
+        },
+        {
+            "images": "00327.nii.gz"
+        },
+        {
+            "images": "00329.nii.gz"
+        },
+        {
+            "images": "00330.nii.gz"
+        },
+        {
+            "images": "00332.nii.gz"
+        },
+        {
+            "images": "00333.nii.gz"
+        },
+        {
+            "images": "00335.nii.gz"
+        },
+        {
+            "images": "00336.nii.gz"
+        },
+        {
+            "images": "00337.nii.gz"
+        },
+        {
+            "images": "00338.nii.gz"
+        },
+        {
+            "images": "00340.nii.gz"
+        },
+        {
+            "images": "00343.nii.gz"
+        },
+        {
+            "images": "00345.nii.gz"
+        },
+        {
+            "images": "00348.nii.gz"
+        },
+        {
+            "images": "00350.nii.gz"
+        },
+        {
+            "images": "00352.nii.gz"
+        },
+        {
+            "images": "00354.nii.gz"
+        },
+        {
+            "images": "00357.nii.gz"
+        },
+        {
+            "images": "00358.nii.gz"
+        },
+        {
+            "images": "00360.nii.gz"
+        },
+        {
+            "images": "00363.nii.gz"
+        },
+        {
+            "images": "00365.nii.gz"
+        },
+        {
+            "images": "00367.nii.gz"
+        },
+        {
+            "images": "00368.nii.gz"
+        },
+        {
+            "images": "00371.nii.gz"
+        },
+        {
+            "images": "00372.nii.gz"
+        },
+        {
+            "images": "00375.nii.gz"
+        },
+        {
+            "images": "00378.nii.gz"
+        },
+        {
+            "images": "00379.nii.gz"
+        },
+        {
+            "images": "00381.nii.gz"
+        },
+        {
+            "images": "00383.nii.gz"
+        },
+        {
+            "images": "00384.nii.gz"
+        },
+        {
+            "images": "00386.nii.gz"
+        },
+        {
+            "images": "00389.nii.gz"
+        },
+        {
+            "images": "00391.nii.gz"
+        },
+        {
+            "images": "00393.nii.gz"
+        },
+        {
+            "images": "00395.nii.gz"
+        },
+        {
+            "images": "00396.nii.gz"
+        },
+        {
+            "images": "00399.nii.gz"
+        },
+        {
+            "images": "00401.nii.gz"
+        },
+        {
+            "images": "00403.nii.gz"
+        },
+        {
+            "images": "00404.nii.gz"
+        },
+        {
+            "images": "00406.nii.gz"
+        },
+        {
+            "images": "00409.nii.gz"
+        },
+        {
+            "images": "00410.nii.gz"
+        },
+        {
+            "images": "00412.nii.gz"
+        },
+        {
+            "images": "00414.nii.gz"
+        },
+        {
+            "images": "00417.nii.gz"
+        },
+        {
+            "images": "00419.nii.gz"
+        },
+        {
+            "images": "00420.nii.gz"
+        },
+        {
+            "images": "00422.nii.gz"
+        },
+        {
+            "images": "00423.nii.gz"
+        },
+        {
+            "images": "00424.nii.gz"
+        },
+        {
+            "images": "00425.nii.gz"
+        },
+        {
+            "images": "00426.nii.gz"
+        },
+        {
+            "images": "00427.nii.gz"
+        },
+        {
+            "images": "00429.nii.gz"
+        },
+        {
+            "images": "00430.nii.gz"
+        },
+        {
+            "images": "00432.nii.gz"
+        },
+        {
+            "images": "00435.nii.gz"
+        },
+        {
+            "images": "00437.nii.gz"
+        },
+        {
+            "images": "00439.nii.gz"
+        },
+        {
+            "images": "00440.nii.gz"
+        },
+        {
+            "images": "00443.nii.gz"
+        },
+        {
+            "images": "00444.nii.gz"
+        },
+        {
+            "images": "00445.nii.gz"
+        },
+        {
+            "images": "00446.nii.gz"
+        },
+        {
+            "images": "00447.nii.gz"
+        },
+        {
+            "images": "00448.nii.gz"
+        },
+        {
+            "images": "00450.nii.gz"
+        },
+        {
+            "images": "00451.nii.gz"
+        },
+        {
+            "images": "00452.nii.gz"
+        },
+        {
+            "images": "00455.nii.gz"
+        },
+        {
+            "images": "00456.nii.gz"
+        },
+        {
+            "images": "00459.nii.gz"
+        },
+        {
+            "images": "00460.nii.gz"
+        },
+        {
+            "images": "00463.nii.gz"
+        },
+        {
+            "images": "00465.nii.gz"
+        },
+        {
+            "images": "00466.nii.gz"
+        },
+        {
+            "images": "00469.nii.gz"
+        },
+        {
+            "images": "00471.nii.gz"
+        },
+        {
+            "images": "00472.nii.gz"
+        },
+        {
+            "images": "00475.nii.gz"
+        },
+        {
+            "images": "00476.nii.gz"
+        },
+        {
+            "images": "00477.nii.gz"
+        },
+        {
+            "images": "00479.nii.gz"
+        },
+        {
+            "images": "00480.nii.gz"
+        },
+        {
+            "images": "00482.nii.gz"
+        },
+        {
+            "images": "00484.nii.gz"
+        },
+        {
+            "images": "00486.nii.gz"
+        },
+        {
+            "images": "00488.nii.gz"
+        },
+        {
+            "images": "00489.nii.gz"
+        },
+        {
+            "images": "00491.nii.gz"
+        },
+        {
+            "images": "00492.nii.gz"
+        },
+        {
+            "images": "00493.nii.gz"
+        },
+        {
+            "images": "00494.nii.gz"
+        },
+        {
+            "images": "00495.nii.gz"
+        },
+        {
+            "images": "00497.nii.gz"
+        },
+        {
+            "images": "00499.nii.gz"
+        },
+        {
+            "images": "00501.nii.gz"
+        },
+        {
+            "images": "00502.nii.gz"
+        },
+        {
+            "images": "00503.nii.gz"
+        }
+    ],
+    "createDate": "2023-07-10_18-24-59"
+}

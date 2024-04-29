@@ -1,0 +1,59 @@
+{
+    "name": "MMWHS_ct",
+    "modality": "CT",
+    "labels": {
+        "0": "background",
+        "205": "the myocardium of the left ventricle",
+        "420": "the left atrium blood cavity",
+        "500": "the left ventricle blood cavity",
+        "550": "the right atrium blood cavity ",
+        "600": "the right ventricle blood cavity",
+        "820": "the ascending aorta",
+        "850": " the pulmonary artery"
+    },
+    "numTraining": 20,
+    "author": "Jia-Xin ZHUANG",
+    "date": "2023/09/13",
+    "training": [
+        {
+            "fold": 0,
+            "image": "ct_train/images/ct_train_1001_image.nii.gz",
+            "label": "ct_train/labels/ct_train_1001_label.nii.gz"
+        },
+        {
+            "fold": 0,
+            "image": "ct_train/images/ct_train_1002_image.nii.gz",
+            "label": "ct_train/labels/ct_train_1002_label.nii.gz"
+        },
+        {
+            "fold": 0,
+            "image": "ct_train/images/ct_train_1003_image.nii.gz",
+            "label": "ct_train/labels/ct_train_1003_label.nii.gz"
+        },
+        {
+            "fold": 0,
+            "image": "ct_train/images/ct_train_1004_image.nii.gz",
+            "label": "ct_train/labels/ct_train_1004_label.nii.gz"
+        },
+        {
+            "fold": 1,
+            "image": "ct_train/images/ct_train_1005_image.nii.gz",
+            "label": "ct_train/labels/ct_train_1005_label.nii.gz"
+        },
+        {
+            "fold": 1,
+            "image": "ct_train/images/ct_train_1006_image.nii.gz",
+            "label": "ct_train/labels/ct_train_1006_label.nii.gz"
+        },
+        {
+            "fold": 1,
+            "image": "ct_train/images/ct_train_1007_image.nii.gz",
+            "label": "ct_train/labels/ct_train_1007_label.nii.gz"
+        },
+        {
+            "fold": 1,
+            "image": "ct_train/images/ct_train_1008_image.nii.gz",
+            "label": "ct_train/labels/ct_train_1008_label.nii.gz"
+        }
+    ]
+}
