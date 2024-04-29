@@ -7,6 +7,14 @@ The project contains two directories, _i.e.,_
 
 We will update these codes soon.
 
+## Datasets
+The details of the pretraining dataset.
+
+![Pretraining dataset](./assets/pretrained_dataset.png)
+
+The details of the finetuning dataset.
+![finetuning dataset](./assets/finetune_dataset.png)
+
 
 ## Reference
 ```
