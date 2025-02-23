@@ -1,0 +1,11 @@
+connected-components-3d
+fastremap
+openpyxl
+tensorboardX
+monai
+nibabel
+timm==0.3.2
+pandas
+matploitlib
+scikit-learn
+einops

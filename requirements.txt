@@ -1,0 +1,16 @@
+connected-components-3d
+fastremap
+openpyxl
+tensorboardX
+monai
+nibabel
+timm==0.3.2
+pandas
+matplotlib
+scikit-learn
+einops
+tensorboard
+pytorch-ignite==0.4.10
+torch==2.0.1
+torchaudio==0.8.1
+torchvision==0.9.1+cu111

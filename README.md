@@ -3,9 +3,9 @@
 
 # 0. Requirements
 * Python 3.8
-* PyTorch 1.13
-* MONAI 0.11
-* CUDA 11.7
+* PyTorch 2.0.1
+* MONAI 1.0.0
+* CUDA 11.8
 * cuDNN 8.5
 * NVIDIA GPU with compute capability 8.6
 
@@ -25,25 +25,24 @@ The project contains two directories, _i.e.,_
 1) Pretrain
 2) Finetune
 
-We will update these codes soon.
 
 # 2. Pretrain
+Please refer to the [Pretrain](./Pretrain) directory for the pretraining code. Make sure you have installed the requirements and downloaded the datasets.
 
 ```
-cd Pretrain
 bash scripts/xxx.sh
 ```
 
 
 # 3. Finetune
+Please refer to the [Finetune](./Finetune) directory for the finetuning code. Make sure you have installed the requirements and downloaded the datasets.
+
 We provide the [pretrained model](https://hkustconnect-my.sharepoint.com/:f:/g/personal/jzhuangad_connect_ust_hk/ElCam2XpVflPvynd9Ymss44Bl1zeKf9gOt-YqsOhMKyY2g?e=fMdhl5
 ) via the Onedrive link and you can finetune the model. Let's take the BTCV as an example.
 
 ```
-cd Finetune
 bash scripts/SwinBaseline/Covid1920_swinBaseline_fold0_231102.sh
 ```
-
 
 
 
@@ -60,8 +59,12 @@ bash scripts/SwinBaseline/Covid1920_swinBaseline_fold0_231102.sh
 ## Acknowledgement
 This codebase heavily references the following projects and we thanks their efforts:
 
-- [Masked Autoencoders](https://github.com/facebookresearch/mae)
-- [SwinUNETR](https://github.com/Project-MONAI/research-contributions/tree/main/SwinUNETR/Pretrain)
+- [Masked Autoencoders](https://github.com/facebookresearch/mae): pretraining code
+- [SwinUNETR](https://github.com/Project-MONAI/research-contributions/tree/main/SwinUNETR/Pretrain): data preparation and pretraining code
+- [MONAI](https://github.com/Project-MONAI/MONAI): a powerful medical image analysis library
 
+Wellcomes to star our repo, and feel free to raise issues if you have any questions.
 
+And also wellcomes to our other works:
+- [VoCo](https://github.com/Luffy03/VoCo): pretrained on the largest 3D medical image datasets (160k+), and achieves new state-of-the-art performance on multiple 3D medical image analysis tasks (~50 tasks).
 

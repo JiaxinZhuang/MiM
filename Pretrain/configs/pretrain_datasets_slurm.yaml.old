@@ -1,0 +1,69 @@
+Pre-trainingDatasetPath:
+- /project/medimgfmod/foundation_CT/cache/100k_p3/BTCV
+- /project/medimgfmod/foundation_CT/cache/100k_p3/TCIAcovid19
+- /project/medimgfmod/foundation_CT/cache/100k_p3/Luna16-jx
+- /project/medimgfmod/foundation_CT/cache/100k_p3/stoic21
+- /scratch/medimgfmod/foundation_CT/cache/Totalsegmentator_dataset
+- /project/medimgfmod/foundation_CT/cache/100k_p3/Flare23
+- /scratch/medimgfmod/foundation_CT/cache/LIDC_convert_v1
+- /project/medimgfmod/foundation_CT/cache/100k_p3/OPC_convert_v1
+- /project/medimgfmod/foundation_CT/cache/100k_p3/TCGA-HNSC_convert_v1
+- /project/medimgfmod/foundation_CT/cache/100k_p3/QIN_convert_v1
+- /project/medimgfmod/foundation_CT/cache/100k_p3/HNPC_convert_v1
+- /scratch/medimgfmod/foundation_CT/cache/HNSCC_convert_v1
+- /scratch/medimgfmod/foundation_CT/cache/CT_COLONOGRAPHY_converted_v1
+- /scratch/medimgfmod/foundation_CT/cache/StonyBrookChestCT_v1
+- /project/medimgfmod/foundation_CT/cache/NLST_convert_v1
+Pre-trainingDatasetJson:
+- btcv.json
+- dataset_TCIAcovid19_0.json
+- dataset_LUNA16_0.json
+- stoic21.json
+- Totalsegmentator_dataset.json
+- flare23.json
+- LIDC.json
+- OPCRadiomics.json
+- TCGA_HNSC.json
+- QIN_HeadNeck.json
+- HeadNeckPet.json
+- HNSCC.json
+- ColonographyTrials.json
+- StonyBrookChestCT.json
+- NLST_convert_v1.json
+DatasetSplit:
+    1k:
+    - BTCV
+    - TCIAcovid19
+    +2k:
+    - Luna16-jx
+    +4k:
+    - stoic21
+    +10k:
+    - Totalsegmentator_dataset
+    - Flare23
+    - HNSCC_convert_v1
+    +20k:
+    - OPC_convert_v1
+    - TCGA-HNSC_convert_v1
+    - QIN_convert_v1
+    - HNPC_convert_v1
+    - CT_COLONOGRAPHY_converted_v1
+    - StonyBrookChestCT_v1
+    +100k:
+    - BTCV
+    - TCIAcovid19
+    - Luna16-jx
+    - stoic21
+    - Totalsegmentator_dataset
+    - Flare23
+    - HNSCC_convert_v1
+    - OPC_convert_v1
+    - TCGA-HNSC_convert_v1
+    - QIN_convert_v1
+    - HNPC_convert_v1
+    - CT_COLONOGRAPHY_converted_v1
+    - StonyBrookChestCT_v1
+    - NLST_convert_v1
+    +110k:
+    - Private01
+    - Private02
