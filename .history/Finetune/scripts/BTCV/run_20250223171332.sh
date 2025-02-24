@@ -1,0 +1,32 @@
+##########
+# Server 6
+source ./default_scripts/gpu6.sh
+source ./default_scripts/default.sh
+source ./default_scripts/mim.sh
+exp=`echo ${0%.sh}`
+exp=`echo ${exp#*/}`
+output_dir=$prefix_dir/$exp
+
+#################### TODO START
+
+pretrained_path=$PATH_TO_PRETRAINED_WEIGHTS/checkpoint-final.pth
+
+CUDA_VISIBLE_DEVICES=${mapping[4]}
+NUM_TRAINERS=`echo $CUDA_VISIBLE_DEVICES | tr ',' '\n' | wc -l`
+dataset_name=BTCV
+fold=0
+batch_size=1
+accum_iter=4
+#################### TODO END
+
+mkdir -p $output_dir
+CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES torchrun --nnodes=1 --rdzv-backend=c10d --max-restarts=1\
+    --nproc-per-node=$NUM_TRAINERS --rdzv-endpoint=localhost:$port\
+    main_finetune_segmentation.py \
+    --fold $fold\
+    --model_name MiM\
+    --dataset_name $dataset_name\
+    --pretrained_path $pretrained_path\
+    --batch_size $batch_size\
+    --accum_iter $accum_iter\
+    --logdir $output_dir 2>&1 | tee $output_dir/log.txt

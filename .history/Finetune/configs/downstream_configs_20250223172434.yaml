@@ -1,0 +1,48 @@
+default:
+- project_name: project02 #! Modifty if necessary
+- excel_num_compared_methods: 2
+- excel_num_samples: 3
+- seed: 47
+- b_min: 0.0
+- b_max: 1.0
+- space_x: 1.5
+- space_y: 1.5
+- space_z: 1.5
+- roi_x: 96
+- roi_y: 96
+- roi_z: 96
+- num_workers: 8
+- overlap: 0.5
+- in_channels: 1
+- reg_weight: 0.00001
+- momentum: 0.99
+- world_size: 1
+- rank: 0
+- dist_backend: nccl
+- lrschedule: warmup_cosine
+- warmup_epochs: 50
+- smooth_dr: 0.000001
+- smooth_nr: 0.0
+- norm_name: instance
+- start_epoch: 0
+- print_freq: 10
+- feature_size: 48
+- out_channels: 32
+- sw_batch_size: 4
+- batch_size: 2
+- data_root_path: /home/jiaxin/data/foundation_ct_downstream/ #! Modifty if necessary
+- accum_iter: 1
+- metric_name: DSC
+Covid19_20:
+- json_list: ./jsons/Covid19_20_folds.json
+- data_dir: /data/jiaxin/data/Covid19_20/Train #! Modifty if necessary
+- persistent_cache_dir: /data/jiaxin/cache/Covid19_20230912 #! Modifty if necessary
+- print_freq: 10
+- out_channels: 2
+- val_every: 5
+- max_epochs: 400
+- loss_name: DiceCELoss
+- weight_decay: 0.00001
+- pred_dir: prediction_overlap5
+- sw_batch_size: 3
+- tolerance_mm: 2

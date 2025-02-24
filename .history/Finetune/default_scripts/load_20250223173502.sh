@@ -15,5 +15,3 @@ fi
 
 # Print the value of the variable
 echo "Final value of $VAR_NAME: ${!VAR_NAME}"
-
-

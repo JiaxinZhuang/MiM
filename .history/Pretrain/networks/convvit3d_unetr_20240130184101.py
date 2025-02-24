@@ -119,7 +119,8 @@ class ConvViT3dUNETR(nn.Module):
             self.backbone = convvit3d_tiny_patch16(args=args)
         else:
             self.backbone = convvit3d_base_patch16(args=args)
-        # swintransformer(
+        # self.backbone = convvit3d_base_patch16(args)
+        # SwinTransformer(
             # in_chans=in_channels,
             # embed_dim=feature_size,
             # window_size=window_size,

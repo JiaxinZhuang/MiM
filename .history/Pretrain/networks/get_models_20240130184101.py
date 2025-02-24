@@ -8,9 +8,13 @@ def build_models(args):
     '''Build model and ema model.'''
     device = torch.device(args.device)
     model_ema = None
-    if args.dataset_loader == 'MiM' and args.dataset_loader == 'v1':
+    if args.dataset_loader == 'mmsmae' and args.dataset_loader == 'v1':
         import models_convmae3d_v4
         model = models_convmae3d_v4.__dict__[args.model_name](norm_pix_loss=args.norm_pix_loss, args=args)
+    elif args.model_name == 'MiM':
+        args.model_name = 'convmae_convvit_base_patch16'
+        import models_convmae3d_v2
+        model = models_convmae3d_v2.__dict__[args.model_name](norm_pix_loss=args.norm_pix_loss, args=args)
     elif args.model_name in ['MoCoV2']:
         from networks.segrenset_encoder import SegResNet as encoder
         import networks.MoCoV2.builder

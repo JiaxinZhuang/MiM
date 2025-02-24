@@ -3,6 +3,8 @@ import os
 from copy import deepcopy
 import torch
 import monai
+
+# Segmentation models
 from monai.networks.nets import UNet, SegResNet
 from networks.unetr import UNETR
 
@@ -10,8 +12,11 @@ CODE_PATH = os.environ.get('CODE_PATH')
 PRETRAINED_PATH = os.environ.get('PRETRAINED_PATH')
 sys.path.append(os.path.join(CODE_PATH, 'MMSMAE_20230904'))
 sys.path.append(os.path.join(CODE_PATH, 'MMSMAE_20230904/networks'))
+# sys.path.append('/jhcnas1/jiaxin/codes/project_02/MMSMAE_20230904/networks')
+# sys.path.append('/jhcnas1/jiaxin/codes/project_02/MMSMAE_20230904')
 from convvit3d_unetr import ConvViT3dUNETR
 
+# Classification models.
 from utils.downstream_utils import interpolate_pos_embed
 
 
@@ -234,7 +239,7 @@ def get_seg_model(args=None):
             # Verify that the backbone parameters are frozen
             for name, param in model.named_parameters():
                 print(f'Freezing {name} {param.requires_grad}')
-    elif args.model_name == 'MiM':
+    elif args.model_name in ['convit3d', 'convit3d_tiny']:
         model = ConvViT3dUNETR(img_size=(args.roi_x, args.roi_y, args.roi_z),
                                in_channels=args.in_channels,
                                out_channels=args.out_channels,
