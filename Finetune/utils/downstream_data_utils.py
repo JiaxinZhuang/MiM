@@ -1,9 +1,13 @@
-"""Jiaxin ZHUANG
-Modified on Apirl 29th, 2024.
+"""
+Author: Jiaxin ZHUANG
+Date: 2025-07-08
 """
 
 import torch
+import numpy as np
+from copy import deepcopy
 import monai
+from monai import data
 from monai.data import load_decathlon_datalist, PersistentDataset
 from monai.transforms import (
     EnsureChannelFirstd,
@@ -28,7 +32,11 @@ from monai.transforms import (
     CastToTyped,
     RandRotate90d,
     RandCropByLabelClassesd,
-    MapTransform)
+    MapTransform,
+    RandZoomdSelect,
+    Sampler,
+    DataLoader,
+    )
 
 try:
     from utils.misc import print_with_timestamp
@@ -47,14 +55,17 @@ def get_loader(args):
         raise NotImplementedError #!! TODO
     elif args.dataset_name == 'msd_spleen':
         raise NotImplementedError #!! TODO
-    elif args.dataset_name in ['10_Decathlon_Task03_Liver', '10_Decathlon_Task03_Liver_tumor',
+    elif args.dataset_name in ['10_Decathlon_Task03_Liver',
+                               '10_Decathlon_Task03_Liver_tumor',
                                '10_Decathlon_Task06_Lung',
-                               '10_Decathlon_Task07_Pancreas', '10_Decathlon_Task07_Pancreas_tumor',
+                               '10_Decathlon_Task07_Pancreas',
+                               '10_Decathlon_Task07_Pancreas_tumor',
                                '10_Decathlon_Task08_HepaticVessel',
-                               '10_Decathlon_Task09_Spleen',]:
-        raise NotImplementedError #!! TODO
-    elif args.dataset_name in ['10_Decathlon_Task10_Colon']:
-        raise NotImplementedError #!! TODO
+                               '10_Decathlon_Task09_Spleen',
+                               '10_Decathlon_Task10_Colon',
+                               ]:
+        data = get_seg_loader_10_decathlon(args)
+        task = 'seg'
     elif args.dataset_name == 'Covid19_20':
         data = get_seg_loader_covid19(args)
         task = 'seg'
@@ -156,3 +167,199 @@ def get_seg_loader_covid19(args):
         return val_loader, val_files
     else:
         return train_loader, val_loader
+
+
+def get_seg_loader_10_decathlon(args):
+    """
+    Get the dataloader for the following datasets:
+        10_Decathlon_Task03_Liver, 10_Decathlon_Task03_Liver_tumor,
+        10_Decathlon_Task06_Lung,
+        10_Decathlon_Task07_Pancreas, 10_Decathlon_Task07_Pancreas_tumor,
+        10_Decathlon_Task08_HepaticVessel,
+        10_Decathlon_Task09_Spleen,
+        10_Decathlon_Task10_Colon,
+    """
+    train_files, val_files = load_fold(args=args, data_dir=args.data_dir,
+                                       datalist_json=args.json_list)
+    if args.dataset_name == '10_Decathlon_Task09_Spleen':
+        print_with_timestamp('Using spleen dataset')
+        train_transforms = Compose(
+            [
+            LoadImaged(keys=["image", "label"]),
+            EnsureChannelFirstd(keys=["image", "label"]),
+            ScaleIntensityRanged(
+                keys=["image"],
+                a_min=args.a_min,
+                a_max=args.a_max,
+                b_min=0.0,
+                b_max=1.0,
+                clip=True,
+            ),
+            CropForegroundd(keys=["image", "label"], source_key="image"),
+            Orientationd(keys=["image", "label"], axcodes="RAS"),
+            Spacingd(keys=["image", "label"], pixdim=(args.space_x, args.space_y, args.space_z),
+                     mode=("bilinear", "nearest")),
+            RandCropByPosNegLabeld(
+                keys=["image", "label"],
+                label_key="label",
+                spatial_size=(args.roi_x, args.roi_y, args.roi_z),
+                pos=1,
+                neg=1,
+                num_samples=args.sw_batch_size,
+                image_key="image",
+                image_threshold=0,
+            ),
+            RandAffined(
+                keys=['image', 'label'],
+                mode=('bilinear', 'nearest'),
+                prob=1.0, spatial_size=(args.roi_x, args.roi_y, args.roi_z),
+                rotate_range=(0, 0, np.pi/15),
+                scale_range=(0.1, 0.1, 0.1)),
+            ]
+        )
+        val_transforms = Compose(
+            [
+                LoadImaged(keys=["image", "label"]),
+                EnsureChannelFirstd(keys=["image", "label"]),
+                ScaleIntensityRanged(
+                    keys=["image"],
+                    a_min=args.a_min,
+                    a_max=args.a_max,
+                    b_min=0.0,
+                    b_max=1.0,
+                    clip=True,
+                ),
+                CropForegroundd(keys=["image", "label"], source_key="image"),
+                Orientationd(keys=["image", "label"], axcodes="RAS"),
+                Spacingd(keys=["image", "label"], pixdim=(args.roi_x, args.roi_y, args.roi_z),
+                        mode=("bilinear", "nearest")),
+            ]
+        )
+    else:
+        # Train transforms
+        train_transforms = Compose([
+            LoadImaged(keys=["image", "label"]),
+            EnsureChannelFirstd(keys=["image", "label"]),
+            Orientationd(keys=["image", "label"], axcodes="RAS"),
+            FilterLabels(args=args),
+            SortLabelMap(args=args),
+            Spacingd(keys=["image", "label"], pixdim=(args.space_x, args.space_y, args.space_z),
+                    mode=("bilinear", "nearest")),
+            ScaleIntensityRanged(
+                keys=["image"],
+                a_min=args.a_min,
+                a_max=args.a_max,
+                b_min=0.0,
+                b_max=1.0,
+                clip=True,
+            ),
+            CropForegroundd(keys=["image", "label"], source_key="image"),
+            RandZoomdSelect(args),
+            SpatialPadd(keys=["image", "label"], spatial_size=(args.roi_x, args.roi_y, args.roi_z),
+                        mode='constant'),
+            RandCropByPosNegLabeld(
+                keys=["image", "label"],
+                label_key="label",
+                spatial_size=(args.roi_x, args.roi_y, args.roi_z),
+                pos=args.num_positive,
+                neg=args.num_negative,
+                num_samples=args.sw_batch_size,
+                image_key="image",
+                image_threshold=0,
+            ),
+            RandFlipd(keys=["image", "label"], prob=args.RandFlipd_prob, spatial_axis=0),
+            RandFlipd(keys=["image", "label"], prob=args.RandFlipd_prob, spatial_axis=1),
+            RandFlipd(keys=["image", "label"], prob=args.RandFlipd_prob, spatial_axis=2),
+            RandRotate90d(keys=["image", "label"], prob=args.RandRotate90d_prob, max_k=3),
+            RandScaleIntensityd(keys="image", factors=0.1, prob=args.RandScaleIntensityd_prob),
+            RandShiftIntensityd(keys="image", offsets=0.1, prob=args.RandShiftIntensityd_prob),
+            RandAffined(
+                keys=['image', 'label'],
+                mode=('bilinear', 'nearest'),
+                prob=1.0, spatial_size=(args.roi_x, args.roi_y, args.roi_z),
+                rotate_range=(0, 0, np.pi/15),
+                scale_range=(0.1, 0.1, 0.1)),
+            ToTensord(keys=["image", "label"]),
+        ])
+        val_transforms = Compose(
+            [
+                LoadImaged(keys=["image", "label"]),
+                EnsureChannelFirstd(keys=["image", "label"]),
+                FilterLabels(args=args),
+                SortLabelMap(args=args),
+                Orientationd(keys=["image", "label"], axcodes="RAS"),
+                Spacingd(keys=["image", "label"], pixdim=(args.space_x, args.space_y, args.space_z),
+                        mode=("bilinear", "nearest")),
+                ScaleIntensityRanged(
+                    keys=["image"],
+                    a_min=args.a_min,
+                    a_max=args.a_max,
+                    b_min=0.0,
+                    b_max=1.0,
+                    clip=True,
+                ),
+                CropForegroundd(keys=["image", "label"], source_key="image"),
+                ToTensord(keys=["image", "label"]),
+            ]
+        )
+
+    train_ds = PersistentDataset(data=train_files, transform=train_transforms,
+                                cache_dir=args.persistent_cache_dir)
+    val_ds = PersistentDataset(data=val_files, transform=val_transforms,
+                               cache_dir=args.persistent_cache_dir)
+    print_with_timestamp(f'Using persistent dataset: {args.persistent_cache_dir}')
+
+    train_sampler = Sampler(train_ds) if args.distributed else None
+    train_loader = data.DataLoader(
+        train_ds,
+        batch_size=args.batch_size,
+        shuffle=(train_sampler is None),
+        num_workers=args.num_workers,
+        sampler=train_sampler,
+        pin_memory=True,
+        persistent_workers=True,
+    )
+    val_sampler = Sampler(val_ds, shuffle=False) if args.distributed else None
+    val_loader = data.DataLoader(
+        val_ds, batch_size=1, shuffle=False, num_workers=args.num_workers,
+        sampler=val_sampler, pin_memory=True, persistent_workers=True)
+    if args.eval_only:
+        # batch size must be 1 for inference!
+        return val_loader, val_files
+    return train_loader, val_loader
+
+
+class FilterLabels(MapTransform):
+    """Filter unsed label.
+    """
+    def __init__(self, args):
+        '''Init'''
+        # super().__init__()
+        self.args = args
+
+    def __call__(self, data):
+        if hasattr(self.args, 'ignore_label'):
+            if self.args.ignore_label is not None:
+                label = deepcopy(data['label'])
+                for key in self.args.ignore_label:
+                    label = torch.where(label == key, torch.zeros_like(label), label)
+                data['label'] = label
+        return data
+
+class SortLabelMap(MapTransform):
+    """Sort the label map.
+    """
+    def __init__(self, args):
+        '''Init'''
+        self.args = args
+
+    def __call__(self, data):
+        unique_labels = torch.unique(data['label'])
+        unique_labels = unique_labels[unique_labels != 0]
+        result = torch.zeros_like(data['label'])
+        for i, label in enumerate(unique_labels, start=1):
+            result = torch.where(data['label'] == label, i, result)
+        unique_labels_after = torch.unique(result)
+        unique_labels_after = unique_labels_after[unique_labels_after != 0]
+        data['label'] = result
+        return data
