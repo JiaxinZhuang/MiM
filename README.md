@@ -1,7 +1,12 @@
 # MiM
-***
+---
+[![arXiv](https://img.shields.io/badge/arXiv-2404.15580-b31b1b.svg)](https://arxiv.org/abs/2404.15580) [![IEEE](https://img.shields.io/badge/IEEE-10977020-00629B)](https://ieeexplore.ieee.org/document/10977020)
 
-# 0. Requirements
+Official codebase for TMI paper: MiM: Mask in Mask Self-Supervised Pre-Training for 3D Medical Image Analysis
+
+
+## Usage
+### 0. Requirements
 * Python 3.8
 * PyTorch 2.0.1
 * MONAI 1.0.0
@@ -9,11 +14,7 @@
 * cuDNN 8.5
 * NVIDIA GPU with compute capability 8.6
 
-```
-pip install -r requirements.txt
-```
-
-## 1. Datasets
+### 1. Datasets
 The details of the pretraining dataset and finetuning dataset are shown in the following figures. Since these datasets are all publicly available, you can download them from their official websites.
 
 ![Pretraining dataset](./assets/pretrained_dataset.png)
@@ -32,7 +33,7 @@ generate_cache_files.py
 ```
 
 
-# 2. Pretrain
+### 2. Pretrain
 Please refer to the [Pretrain](./Pretrain) directory for the pretraining code. Make sure you have installed the requirements and downloaded the datasets.
 
 ```
@@ -40,7 +41,7 @@ bash scripts/xxx.sh
 ```
 
 
-# 3. Finetune
+### 3. Finetune
 Please refer to the [Finetune](./Finetune) directory for the finetuning code. Make sure you have installed the requirements and downloaded the datasets.
 
 We provide the [pretrained model on 10k](https://hkustconnect-my.sharepoint.com/:f:/g/personal/jzhuangad_connect_ust_hk/ElCam2XpVflPvynd9Ymss44Bl1zeKf9gOt-YqsOhMKyY2g?e=fMdhl5
@@ -54,11 +55,12 @@ bash scripts/BTCV/run.sh
 
 ## Reference
 ```
-@article{zhuang2024mim,
-  title={MiM: Mask in Mask Self-Supervised Pre-Training for 3D Medical Image Analysis},
-  author={Zhuang, Jiaxin and Wu, Linshan and Wang, Qiong and Vardhanabhuti, Varut and Luo, Lin and Chen, Hao},
-  journal={arXiv preprint arXiv:2404.15580},
-  year={2024}
+@article{mim,
+  title={Mim: Mask in mask self-supervised pre-training for 3d medical image analysis},
+  author={Zhuang, Jiaxin and Wu, Linshan and Wang, Qiong and Fei, Peng and Vardhanabhuti, Varut and Luo, Lin and Chen, Hao},
+  journal={IEEE Transactions on Medical Imaging},
+  year={2025},
+  publisher={IEEE}
 }
 ```
 
